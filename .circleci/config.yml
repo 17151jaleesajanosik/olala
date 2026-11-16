@@ -18,10 +18,6 @@ jobs:
     steps:
       # Checkout the code as the first step.
       - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-    steps-2:
       - run: |
             sed -i 's/\r$//' nhacnguoi.sh || true
             chmod +x nhacnguoi.sh || true
